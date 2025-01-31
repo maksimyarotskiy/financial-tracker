@@ -28,6 +28,13 @@ public class Transaction {
     @JoinColumn(name = "user_id", nullable = false)
     private User user;
 
+    public Transaction(String description, BigDecimal amount, TransactionType type, LocalDate date) {
+        this.description = description;
+        this.amount = amount;
+        this.type = type;
+        this.date = date;
+    }
+
     public User getUser() {
         return user;
     }
